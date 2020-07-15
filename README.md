@@ -7,12 +7,12 @@ Authors: [Juyong Zhang](http://staff.ustc.edu.cn/~juyong/), Yuxin Yao, [Bailin D
 This code is protected under patent. It can be only used for research purposes. If you are interested in business purposes/for-profit use, please contact Juyong Zhang (the author, email: juyong@ustc.edu.cn).
 
 
-##Compilation
+## Compilation
 
 The code is compiled using [CMake](https://cmake.org/) and requires Eigen. It has been tested on Ubuntu 16.04 with gcc 5.4.0 and on Windows with Visual Studio 2015. An executable `FRICP` will be generated.
 
 
-##Usage
+## Usage
 
 The program is run with four input parameters:
 
@@ -40,5 +40,5 @@ $ FRICP ./data/target.ply ./data/source.ply ./data/res/ 3
 
 But obj and ply files are supported.
 
-##Acknowledgements
+## Acknowledgements
 The code is adapted from the [Sparse ICP implementation](https://github.com/OpenGP/sparseicp) released by the authors.
