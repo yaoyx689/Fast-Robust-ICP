@@ -1,6 +1,6 @@
 # Fast-Robust-ICP
 
-This repository includes the source code the paper [Fast and Robust Iterative Closet Point]().
+This repository includes the source code the paper [Fast and Robust Iterative Closet Point](https://arxiv.org/abs/2007.07627).
 
 Authors: [Juyong Zhang](http://staff.ustc.edu.cn/~juyong/), Yuxin Yao, [Bailin Deng](http://www.bdeng.me/).
 
@@ -30,7 +30,7 @@ The program is run with four input parameters:
 6: Sparse ICP
 7: Sparse ICP point to plane
 ```
-You can ignore the last parameter, in which case our Robust ICP will be used by default. If you have an initial transformation to help registration, you can set `use_init=true` and the `file_init` is the initial file name in `main.cpp` . Both input and output transformations are 4x4 transformation matrix. 
+You can ignore the last parameter, in which case our Robust ICP will be used by default. If you have an initial transformation to help registration, you can set `use_init=true` and the `file_init` is the initial file name in `main.cpp` . Both input and output transformations are 4x4 matrices. 
 
 Example:
 
