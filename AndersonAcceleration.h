@@ -83,7 +83,6 @@ public:
         iter_ = 0;
         col_idx_ = 0;
         current_u_ = Eigen::Map<const VectorX>(u, dim_);
-        coeffs.clear();
     }
 
 	// m: number of previous iterations used
@@ -104,7 +103,6 @@ public:
 		current_u_ = Eigen::Map<const VectorX>(u0, d);
 		iter_ = 0;
 		col_idx_ = 0;
-        coeffs.clear();
 	}
 
 private:
@@ -128,7 +126,6 @@ private:
 
 	MatrixXX T_prev_dF_;
 	MatrixXX T_prev_dG_;
-    std::vector<std::vector<double>> coeffs;
 };
 
 
