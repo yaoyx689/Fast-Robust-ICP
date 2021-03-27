@@ -6,15 +6,33 @@ Authors: [Juyong Zhang](http://staff.ustc.edu.cn/~juyong/), Yuxin Yao, [Bailin D
 
 This code is protected under patent. It can be only used for research purposes. If you are interested in business purposes/for-profit use, please contact Juyong Zhang (the author, email: juyong@ustc.edu.cn).
 
-This code is written by Yuxin Yao. If you have questions, please contact yaoyuxin@mail.ustc.edu.cn. 
+This code was written by Yuxin Yao. If you have questions, please contact yaoyuxin@mail.ustc.edu.cn. 
 
 
 ## Compilation
 
-The code is compiled using [CMake](https://cmake.org/) and requires Eigen. It has been tested on Ubuntu 16.04 with gcc 5.4.0 and on Windows with Visual Studio 2015. An executable `FRICP` will be generated.
+The code is compiled using [CMake](https://cmake.org/) and requires [Eigen](eigen.tuxfamily.org). It has been tested on Ubuntu 16.04 with gcc 5.4.0 and on Windows with Visual Studio 2015. 
 
+Follow the following steps to compile the code:
 
-## Usage./FR
+1) Make sure Eigen is installed. We recommend version 3.3+.
+	- Download Eigen from eigen.tuxfamily.org and extract it 
+	into a folder 'eigen' within the 'include' folder. Make sure the files 'include/eigen/Eigen/Dense' and 'include/eigen/unsupported/Eigen/MatrixFunctions' can be found 
+	- Alternatively: On Ubuntu, use the command "apt-get install libeigen3-dev" to install Eigen. 
+
+2) Create a build folder 'build' within the root directory of the code
+
+3) Run cmake to generate the build files inside the build folder, and compile the source code:
+    - On linux, run the following commands within the build folder:
+    ```
+   $ cmake -DCMAKE_BUILD_TYPE=Release ..
+   $ make
+    ```
+    - On windows, use the cmake GUI to generate a visual studio solution file, and build the solution.
+
+4) Afterwards, there should be an exectuable file 'FRICP' generated.
+
+## Usage
 
 The program is run with four input parameters:
 
@@ -30,7 +48,7 @@ The program is run with four input parameters:
 4: ICP Point-to-plane
 5: Our (Robust ICP point-to-plane)
 6: Sparse ICP
-7: Sparse ICP point to plane
+7: Sparse ICP point-to-plane
 ```
 You can ignore the last parameter, in which case `Ours (Robust ICP)` will be used by default. 
 

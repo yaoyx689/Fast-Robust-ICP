@@ -1,19 +1,13 @@
 #ifndef TYPES_H
 #define TYPES_H
 
-#include <Eigen/Dense>
-#include <Eigen/Sparse>
+#include <eigen/Eigen/Dense>
 
 #ifdef USE_FLOAT_SCALAR
 typedef float Scalar
 #else
 typedef double Scalar;
 #endif
-
-typedef Eigen::SparseMatrix<Scalar, Eigen::ColMajor> ColMajorSparseMatrix;
-typedef Eigen::SparseMatrix<Scalar, Eigen::RowMajor> RowMajorSparseMatrix;
-typedef Eigen::Triplet<Scalar> Triplet;
-
 
 #ifdef EIGEN_DONT_ALIGN
 #define EIGEN_ALIGNMENT Eigen::DontAlign
@@ -41,8 +35,6 @@ typedef MatrixT<Eigen::Dynamic, 2> MatrixX2;				///< A n by 2 matrix.
 typedef MatrixT<Eigen::Dynamic, 1> VectorX;					///< A nd column vector.
 typedef MatrixT<Eigen::Dynamic, Eigen::Dynamic> MatrixXX;	///< A n by m matrix.
 typedef Eigen::Matrix<Scalar, 12, 12, 0, 12, 12> EigenMatrix12;
-typedef Eigen::SparseMatrix<Scalar> SparseMatrix;
-typedef Eigen::Triplet<Scalar, int> SparseMatrixTriplet;
 
 // eigen quaternions
 typedef Eigen::AngleAxis<Scalar> EigenAngleAxis;
