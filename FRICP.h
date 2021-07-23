@@ -432,6 +432,7 @@ public:
             double med1;
             igl::median(W, med1);
             nu1 = par.nu_begin_k * med1;
+            nu1 = nu1>nu2? nu1:nu2;
         }
         double end_init = omp_get_wtime();
         double init_time = end_init - begin_init;
@@ -773,6 +774,7 @@ public:
             igl::median(W, med1);
             nu1 =par.nu_begin_k * med1;
             nu2 = par.nu_end_k * FindKnearestNormMed(kdtree, Y, 7, norm_y);
+            nu1 = nu1>nu2? nu1:nu2;
         }
         double end_init = omp_get_wtime();
         double init_time = end_init - begin_init;
