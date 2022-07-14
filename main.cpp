@@ -128,6 +128,11 @@ int main(int argc, char const ** argv)
     {
         pars.f = ICP::NONE;
         pars.use_AA = false;
+        if(normal_target.size()==0)
+        {
+            std::cout << "Warning! The target model without normals can't run Point-to-plane method!" << std::endl;
+            exit(0);
+        }
         fricp.point_to_plane(vertices_source, vertices_target, normal_source, normal_target, source_mean, target_mean, pars);
         res_trans = pars.res_trans;
         break;
@@ -137,6 +142,11 @@ int main(int argc, char const ** argv)
         pars.nu_end_k = 1.0/6;
         pars.f = ICP::WELSCH;
         pars.use_AA = true;
+        if(normal_target.size()==0)
+        {
+            std::cout << "Warning! The target model without normals can't run Point-to-plane method!" << std::endl;
+            exit(0);
+        }
         fricp.point_to_plane_GN(vertices_source, vertices_target, normal_source, normal_target, source_mean, target_mean, pars);
         res_trans = pars.res_trans;
         break;
@@ -149,6 +159,11 @@ int main(int argc, char const ** argv)
     }
     case SICPPPL:
     {
+        if(normal_target.size()==0)
+        {
+            std::cout << "Warning! The target model without normals can't run Point-to-plane method!" << std::endl;
+            exit(0);
+        }
         SICP::point_to_plane(vertices_source, vertices_target, normal_target, source_mean, target_mean, spars);
         res_trans = spars.res_trans;
         break;
