@@ -22,17 +22,20 @@ bool read_obj(MatrixType& vertices, MatrixType& normals, MatrixType& vert_colors
 
     //--- First pass, counts vertices
     int n_vertices = 0;
+    int n_normals = 0;
     while (in && !feof(in) && fgets(s, 200, in)) {
         // comment
         if (s[0] == '#' || isspace(s[0])) continue;
         // vertex
         else if (strncmp(s, "v ", 2) == 0)
             n_vertices++;
+        else if (strncmp(s, "vn ", 2) == 0)
+            n_normals++;
     }
     fseek(in, 0, 0); ///< rewind
     vertices.resize(D, n_vertices);
-    normals.resize(D, n_vertices);
-    vert_colors.resize(D, n_vertices);
+    if(n_normals > 0)
+        normals.resize(D, n_vertices);
     bool runonce = true;
 
     //--- Second pass, fills in
@@ -61,6 +64,9 @@ bool read_obj(MatrixType& vertices, MatrixType& normals, MatrixType& vert_colors
                             vertices(0,curr_vertex) = x;
                             vertices(1,curr_vertex) = y;
                             vertices(2,curr_vertex) = z;
+
+                            if(vert_colors.size()==0)
+                                vert_colors.resize(D, n_vertices);
 
                             vert_colors(0, curr_vertex) = cx;
                             vert_colors(1, curr_vertex) = cy;
@@ -221,6 +227,7 @@ bool read_ply(MatrixType& vertices, MatrixType& normals, MatrixType& colors, con
         }
         memset(&s, 0, 200);
     }
+
     // clear line
     memset(&s, 0, 200);
     curr_vertex = 0;
