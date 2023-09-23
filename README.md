@@ -11,7 +11,7 @@ This code was written by Yuxin Yao. If you have questions, please contact yaoyux
 
 ## Compilation
 
-The code is compiled using [CMake](https://cmake.org/) and requires [Eigen](eigen.tuxfamily.org). It has been tested on Ubuntu 16.04 with gcc 5.4.0 and on Windows with Visual Studio 2015. 
+The code is compiled using [CMake](https://cmake.org/) and requires [Eigen](https://eigen.tuxfamily.org/). It has been tested on Ubuntu 16.04 with gcc 5.4.0 and on Windows with Visual Studio 2015. 
 
 Follow the following steps to compile the code:
 
