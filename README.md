@@ -86,10 +86,10 @@ Please cite the following papers if it helps your research:
   author={Juyong Zhang and Yuxin Yao and Bailin Deng},
   title={Fast and Robust Iterative Closest Point}, 
   journal={IEEE Transactions on Pattern Analysis and Machine Intelligence}, 
-  year={2021},
-  volume={},
-  number={},
-  pages={1-1}}
+  year={2022},
+  volume={44},
+  number={7},
+  pages={3450-3466}}
 ```
 
 
