@@ -205,6 +205,10 @@ bool read_ply(MatrixType& vertices, MatrixType& normals, MatrixType& colors, con
         }
         if (strncmp(s, "property float x", 16) == 0)
         {
+            if(strncmp(s, "property float x_", 17)==0)
+            {
+                continue;
+            }
             vertices.resize(D,n_vertices);
             ID[0]=1;
             dim += 3;
