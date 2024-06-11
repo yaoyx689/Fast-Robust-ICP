@@ -4,8 +4,6 @@ This repository includes the source code the paper [Fast and Robust Iterative Cl
 
 Authors: [Juyong Zhang](http://staff.ustc.edu.cn/~juyong/), [Yuxin Yao](https://yaoyx689.github.io/), [Bailin Deng](http://www.bdeng.me/).
 
-This code is protected under patent. It can be only used for research purposes. If you are interested in business purposes/for-profit use, please contact Juyong Zhang (the author, email: juyong@ustc.edu.cn).
-
 This code was written by Yuxin Yao. If you have questions, please contact yaoyuxin@mail.ustc.edu.cn. 
 
 
