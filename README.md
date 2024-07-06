@@ -9,18 +9,14 @@ This code was written by Yuxin Yao. If you have questions, please contact yaoyux
 
 ## Compilation
 
-The code is compiled using [CMake](https://cmake.org/) and requires [Eigen](https://eigen.tuxfamily.org/). It has been tested on Ubuntu 16.04 with gcc 5.4.0 and on Windows with Visual Studio 2015. 
+The code is compiled using [CMake](https://cmake.org/). It has been tested on Ubuntu 24.04 with gcc 13.2.0 and it should work on Windows with Visual Studio 2015. 
 
 Follow the following steps to compile the code:
 
-1) Make sure Eigen is installed. We recommend version 3.3+.
-	- Download Eigen from eigen.tuxfamily.org and extract it 
-	into a folder 'eigen' within the 'include' folder. Make sure the files 'include/eigen/Eigen/Dense' and 'include/eigen/unsupported/Eigen/MatrixFunctions' can be found 
-	- Alternatively: On Ubuntu, use the command "apt-get install libeigen3-dev" to install Eigen. 
 
-2) Create a build folder 'build' within the root directory of the code
+1) Create a build folder 'build' within the root directory of the code
 
-3) Run cmake to generate the build files inside the build folder, and compile the source code:
+2) Run cmake to generate the build files inside the build folder, and compile the source code:
     - On linux, run the following commands within the build folder:
     ```
    $ cmake -DCMAKE_BUILD_TYPE=Release ..
@@ -28,7 +24,7 @@ Follow the following steps to compile the code:
     ```
     - On windows, use the cmake GUI to generate a visual studio solution file, and build the solution.
 
-4) Afterwards, there should be an exectuable file 'FRICP' generated.
+3) Afterwards, there should be an exectuable file 'FRICP' generated.
 
 ## Usage
 
@@ -52,7 +48,7 @@ You can ignore the last parameter, in which case `Ours (Robust ICP)` will be use
 
 Example:
 ```
-$ ./FRICP ./data/target.ply ./data/source.ply ./data/res/ 3
+$ ./FRICP ./data/sample1/target.ply ./data/sample1/source.ply ./data/sample1/res/ 3
 ```
 But obj and ply (Non-binary encoding) files are supported.
 
