@@ -25,7 +25,14 @@ include_directories(${NANOFLANN_INCLUDE_DIR})
 include_directories(.)
 file(GLOB SOURCES "*.cpp")
 file(GLOB HEADERS "*.h")
+
+# 排除新的相似变换主程序，避免多个main函数冲突
+list(REMOVE_ITEM SOURCES "${CMAKE_CURRENT_SOURCE_DIR}/main_similarity.cpp")
+
 add_executable(FRICP ${SOURCES} ${HEADERS})
+
+# 添加相似变换ICP可执行文件
+add_executable(FRICP_Similarity main_similarity.cpp ${HEADERS})
 
 if(APPLE OR UNIX)
     #--- Deploy data folder link
