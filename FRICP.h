@@ -2,7 +2,7 @@
 #define FRICP_H
 #include "ICP.h"
 #include <AndersonAcceleration.h>
-#include <eigen/unsupported/Eigen/MatrixFunctions>
+#include <unsupported/Eigen/MatrixFunctions>
 #include "median.h"
 #include <limits>
 #define SAME_THRESHOLD 1e-6

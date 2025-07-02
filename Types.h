@@ -1,7 +1,7 @@
 #ifndef TYPES_H
 #define TYPES_H
 
-#include <eigen/Eigen/Dense>
+#include <Eigen/Dense>
 
 #ifdef USE_FLOAT_SCALAR
 typedef float Scalar

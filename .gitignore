@@ -1,0 +1,28 @@
+# Build directories
+build/
+cmake-build-*/
+
+# Compiled binaries
+test_similarity
+test_real_similarity
+FRICP_Similarity
+
+# Benchmark results
+benchmark_results/
+
+# Visualization outputs
+*.png
+
+# Temporary files
+*.tmp
+*.log
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
